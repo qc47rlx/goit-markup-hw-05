@@ -607,7 +607,7 @@ a {
 }
 
 .feedback-container {
-  max-width: 408px;
+  width: 408px;
   min-height: 584px;
   border-radius: 4px;
   background-color: #fcfcfc;
