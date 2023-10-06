@@ -802,7 +802,7 @@ input[type="checkbox"]:checked + label > span {
   text-decoration: underline;
 }
 
-.feedback-submit-button {
+.feedback-submit-btn {
   display: block;
   background-color: #4d5ae5;
   color: #ffffff;
@@ -823,8 +823,8 @@ input[type="checkbox"]:checked + label > span {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.feedback-submit-button:hover,
-.feedback-submit-button:focus {
+.feedback-submit-btn:hover,
+.feedback-submit-btn:focus {
   background-color: #404bbf;
 }
 
