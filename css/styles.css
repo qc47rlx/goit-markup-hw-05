@@ -826,6 +826,7 @@ input[type="checkbox"]:checked + label > span {
 .feedback-submit-btn:hover,
 .feedback-submit-btn:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .is-hidden {
