@@ -664,11 +664,10 @@ a {
   fill: #ffffff;
 }
 
-.modal-name {
+.modal-title {
   display: flex;
   justify-content: center;
   margin-bottom: 16px;
-
   width: 360px;
   height: 24px;
   color: var(--NAVY-BLUE, #2e2f42);
