@@ -600,27 +600,27 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(46, 47, 66, 0.4);
+  background-color: rgba(46, 47, 66, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 10;
 }
 
 .feedback-container {
   width: 408px;
   min-height: 584px;
+  padding: 72px 24px 24px 24px;
   border-radius: 4px;
-  background-color: #fcfcfc;
+  background: var(--DAIRY, #fcfcfc);
   position: absolute;
-  display: block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 72px 24px 24px 24px;
-  margin: 0 auto;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feedback-close-btn {
@@ -664,38 +664,48 @@ a {
   fill: #ffffff;
 }
 
-.feedback-title {
-  color: #2e2f42;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  margin-bottom: 16px;
-}
-
-.feedback-input {
-  width: 100%;
-  height: 40px;
-  border-radius: 4px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  background-color: transparent;
-  padding-left: 38px;
-  padding-right: 16px;
-  outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.feedback-container .form-field {
+.form-field {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 8px;
 }
 
-.form-field:focus-within .feedback-input {
-  border-color: #4d5ae5;
+.feedback-input {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  outline: transparent;
+  background-color: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:focus-within + .svg-input {
+.input-gang {
+  position: relative;
+}
+
+.feedback-input:focus + .svg-input {
   fill: #4d5ae5;
+}
+
+.svg-input {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: #2e2f42;
+  outline: transparent;
+  background-color: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feedback-input:focus {
+  border-color: #4d5ae5;
 }
 
 .feedback-submit-btn {
@@ -808,30 +818,31 @@ input[type="checkbox"]:checked + label > span {
 }
 
 .feedback-submit-btn {
-  display: block;
-  background-color: #4d5ae5;
   color: #ffffff;
+  cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  font-style: inherit;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  cursor: pointer;
-  margin: 0 auto 24px;
-  padding: 16px 32px;
-  border: none;
-  border-radius: 4px;
+  display: block;
   min-width: 169px;
   height: 56px;
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  background-color: #4d5ae5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  /* transition: transform 200ms ease-in-out, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feedback-submit-btn:hover,
 .feedback-submit-btn:focus {
   background-color: #404bbf;
-  border: none;
 }
 
 .is-hidden {
