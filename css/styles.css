@@ -694,7 +694,7 @@ a {
   border-color: #4d5ae5;
 }
 
-.form-field:focus-within .svg-input {
+.form-field:focus-within + .svg-input {
   fill: #4d5ae5;
 }
 
