@@ -624,37 +624,42 @@ a {
 }
 
 .feedback-close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  margin-left: auto;
-  margin-bottom: 24px;
+  cursor: pointer;
   display: flex;
-  padding: 0;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  padding: 0;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
-  background-color: #e7e9fc;
-  cursor: pointer;
+  outline: transparent;
   border-radius: 50%;
+  background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.feedback-close-btn .svg-xclose {
+.feedback-close-btn:hover {
+  border: none;
+  background-color: #404bbf;
+}
+
+.close-btn:focus {
+  border: none;
+  background-color: #404bbf;
+}
+
+.svg-xclose {
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.feedback-close-btn:hover,
-.feedback-close-btn:focus {
-  background-color: #404bbf;
-  border: none;
+.feedback-close-btn:hover .svg-xclose {
+  fill: #ffffff;
 }
-
-.feedback-close-btn:hover .svg-xclose,
 .feedback-close-btn:focus .svg-xclose {
   fill: #ffffff;
 }
